@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="d-flex justify-content-center w-100 h-100 p-5 row">
+    <div class="col-sm-7 col-md-6 col-lg-4 m-1 mx-3">
+        <div class="d-flex  m-2 card text-center" ><!-- w-100 h-50 -->
+            <img  src="{{item.image}}" alt="">
+            <p class="m-0 mt-1">ID: {{item.id}}</p>
+            <p class="m-0 mt-1">Nombre: {{item.name}}</p>
+            <p class="m-0 mt-1">Genero: {{item.gender}}</p>
+            <p class="m-0 mt-1">Especie: {{item.species}}</p>
+            <!-- Con ngClass clasificamos visualmente  -->
+            <p class="m-0 mt-1" [ngClass]="{
+                'muerto': (item.status | lowercase) == 'dead',
+                'vivo': (item.status | lowercase) == 'alive',
+                'desconocido': (item.status | lowercase) == 'unknown'
+            }">Estado: {{item.status}}</p>
+            <p class="m-0 mt-1">Tipo: {{item.type}}</p>
+        </div>
+    </div>
+</div>

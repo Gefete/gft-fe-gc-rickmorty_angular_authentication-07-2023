@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "gft-fe-gc-rickmorty_angular-07-2023",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

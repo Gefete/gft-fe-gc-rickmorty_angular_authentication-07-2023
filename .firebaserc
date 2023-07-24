@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fe-gc-ang-auth-firebase": {
+      "hosting": {
+        "gft-fe-gc-rickmorty_angular-07-2023": [
+          "fe-gc-ang-auth-firebase"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fe-gc-ang-auth-firebase"
+  }
+}
