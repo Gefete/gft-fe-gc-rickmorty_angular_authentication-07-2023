@@ -1,15 +1,16 @@
 <div class="container ">
     <h1>Iniciar Sesion</h1>
 
-    <form>
+    <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
         <div class="form-group mt-3">
-            <label for="nombre">Usuario:</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+            <label for="nombre">email:</label>
+            <input type="email" class="form-control" id="nombre" formControlName="email" placeholder="Ingresa tu email">
         </div>
         <div class="form-group mt-3">
             <label for="password">Contraseña:</label>
-            <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+            <input type="password" class="form-control" id="password" formControlName="password" placeholder="Ingresa tu contraseña">
         </div>
-        <button type="submit" class="btn btn-primary mt-4">Iniciar Sesion</button>
+        <button type="submit" value="Enviar" class="btn btn-primary mt-4">Iniciar Sesion</button>
     </form>
+    <button class="btn btn-info" (click)="onClick()">Login With Google</button>
 </div>

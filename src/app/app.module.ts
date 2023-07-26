@@ -15,6 +15,8 @@ import { NavbarComponent } from './util/navbar/navbar.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth())
   ],
